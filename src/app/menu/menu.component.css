@@ -1,0 +1,45 @@
+@import url(../../styles.css);
+
+.menu{
+    height: 99%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(95, 95, 95);
+    margin-bottom: 1%;
+    position: fixed;
+    left: -7.5%;
+    bottom:0;
+    top: 0;
+    z-index: 1;
+    float: right;
+    transform: translateX(0);
+    transition: .5s ease;
+}
+
+.option{
+    color: white;
+    padding: 0px 20px;
+    font-size: large;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+}
+
+.subOptions {
+    position: absolute;
+    font-size: large;
+    justify-content: center;
+}
+
+mat-icon{
+    line-height: 225%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.menu:hover{
+    left: 0;
+    transform: translateX(.05em)
+}
