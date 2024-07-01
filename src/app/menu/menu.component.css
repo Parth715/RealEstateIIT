@@ -1,6 +1,14 @@
 @import url(../../styles.css);
 
-.menu{
+.menuShow{
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom:0;
+    background: rgb(95, 95, 95);  
+    padding-right: 1em; 
+}
+.menuHide{
     height: 99%;
     width: 10%;
     display: flex;
@@ -15,6 +23,9 @@
     float: right;
     transform: translateX(0);
     transition: .5s ease;
+    &.logo{
+        margin-left: 50%;
+    }
 }
 
 .option{

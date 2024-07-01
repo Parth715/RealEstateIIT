@@ -3,8 +3,7 @@
     --clr-bg: hsl(310, 21%, 16%);
 }
 html, body{
-    height: 100%;
-    overflow: hidden;
+    height: fit-content;
 }
 
 .page{
@@ -13,6 +12,7 @@ html, body{
     &.home {
         display: flex;
         justify-content: space-evenly;
+        height: 100%;
     }
 }
 
@@ -44,31 +44,7 @@ html, body{
 }
 
 .GZbtn:hover:after {
-    animation: lightUpPartially .3s;
+    animation: .3s;
     border-radius: 1em;
     opacity: .5;
-}
-
-.GZbtn:hover:before{
-    animation: lightup .3s;
-    opacity: 1;
-    display: block;
-}
-
-@keyframes lightup {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes lightUpPartially {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: .5;
-    }
 }
