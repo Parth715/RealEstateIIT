@@ -1,35 +1,49 @@
 @import url(../../styles.css);
 
 .menuShow{
-    width: 8%;
+    width: 11em;
     position: fixed;
-    left: 0;
+    left: -4.5px;
     top:0;
     bottom:0;
     background: rgb(95, 95, 95);  
     padding-right: 1em; 
     z-index: 1;
     position: absolute;
-    float: right;
-    margin-left: -6.5%;
+    margin-left: -8.8em;
     transition: 1s ease;
 }
 
 .row{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 105%;
+}
+
+.row .dropdown{
+    position: relative;
+    display: flex;
+    &.noOptions{
+        margin-left: 1.7em;
+        justify-content: space-between;
+        width:100%
+    }
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    background: rgb(95, 95, 95);
+    min-width: 160px;
+    z-index: 1;
+    width: 5em;
 }
 
 .row:hover{
     background-color: rgb(155, 155, 155);
     border-radius: 5px;
-}
-
-.showIcon {
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-between;
 }
 
 mat-icon{
@@ -41,27 +55,12 @@ mat-icon{
     transform: translateX(75%);
 }
 
-.dropdown{
-    position: relative;
-    display: flex;
-    &.noOptions{
-        margin-left: 1.7em;
-    }
-}
 .dropdown:hover > #dropdownarrow{
     transform: rotate(90deg);
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: rgb(95, 95, 95);
-    min-width: 160px;
-    z-index: 1;
-    width: 5em;
-  }
 
-  .dropdown-content p {
+.dropdown-content p {
     color: black;
     padding: 12px 16px;
     display: block;
