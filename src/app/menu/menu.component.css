@@ -1,17 +1,16 @@
 @import url(../../styles.css);
 
 .menuShow{
-    width: 8%;
+    width: 11em;
     position: fixed;
-    left: 0;
+    left: -4.5px;
     top:0;
     bottom:0;
     background: rgb(95, 95, 95);  
     padding-right: 1em; 
     z-index: 1;
     position: absolute;
-    float: right;
-    margin-left: -6.5%;
+    margin-left: -8.8em;
     transition: 1s ease;
 }
 
@@ -61,7 +60,7 @@ mat-icon{
     width: 5em;
   }
 
-  .dropdown-content p {
+.dropdown-content p {
     color: black;
     padding: 12px 16px;
     display: block;
