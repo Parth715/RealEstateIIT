@@ -16,9 +16,9 @@
 }
 
 .row{
-    display: flex;
+    display: block;
     justify-content: space-between;
-    width: 105%;
+    width: fit-content;
 }
 
 .row:hover{
@@ -26,10 +26,17 @@
     border-radius: 5px;
 }
 
+.row .option{
+    display:flex;
+    width: 13em;
+    justify-content: space-between;
+    transition: .5 ease;
+}
+
 .showIcon {
     margin-left: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 mat-icon{
@@ -41,20 +48,13 @@ mat-icon{
     transform: translateX(75%);
 }
 
-.dropdown{
-    position: relative;
-    display: flex;
-    &.noOptions{
-        margin-left: 1.7em;
-    }
-}
-.dropdown:hover > #dropdownarrow{
+.option:hover > #dropdownarrow{
     transform: rotate(90deg);
+    transition: .5s ease;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
     background: rgb(95, 95, 95);
     min-width: 160px;
     z-index: 1;
@@ -69,6 +69,6 @@ mat-icon{
 
 .dropdown-content p:hover {background: rgb(95, 95, 95);}
 
-.dropdown:hover .dropdown-content {display: block;}
+#dropdownarrow > .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
